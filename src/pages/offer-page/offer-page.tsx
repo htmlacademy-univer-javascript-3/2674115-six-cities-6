@@ -80,7 +80,7 @@
           <div className='header__wrapper'>
             <div className='header__left'>
               <a className='header__logo-link' href='main.html'>
-                <img className='header__logo' src='img/logo.svg' alt='6 cities logo' width='81' height='41' />
+                <img className='header__logo' src='img/logo.svg' alt='6 cities logo' width='81' height='41'/>
               </a>
             </div>
             <nav className='header__nav'>
@@ -171,7 +171,9 @@
                 <h2 className='offer__host-title'>Meet the host</h2>
                 <div className='offer__host-user user'>
                   <div className='offer__avatar-wrapper offer__avatar-wrapper--pro user__avatar-wrapper'>
-                    <img className='offer__avatar user__avatar' src='img/avatar-angelina.jpg' width='74' height='74' alt='Host avatar' />
+                    <img className='offer__avatar user__avatar' src='img/avatar-angelina.jpg' width='74' height='74'
+                      alt='Host avatar'
+                    />
                   </div>
                   <span className='offer__user-name'>
                     Angelina
@@ -182,21 +184,32 @@
                 </div>
                 <div className='offer__description'>
                   <p className='offer__text'>
-                    This beautiful apartment is located in the heart of the historic district, offering stunning views of the city. Recently renovated with modern amenities while preserving original architectural details.
+                    This beautiful apartment is located in the heart of the historic district, offering stunning views
+                    of the city. Recently renovated with modern amenities while preserving original architectural
+                    details.
                   </p>
                   <p className='offer__text'>
-                    Perfect for both short stays and longer visits. The space features high ceilings, large windows, and a fully equipped kitchen. Within walking distance to major attractions, restaurants, and shopping areas.
+                    Perfect for both short stays and longer visits. The space features high ceilings, large windows, and
+                    a fully equipped kitchen. Within walking distance to major attractions, restaurants, and shopping
+                    areas.
                   </p>
                 </div>
               </div>
               <section className='offer__reviews reviews'>
-                <h2 className='reviews__title'>Reviews &middot; <span className='reviews__amount'>{reviews.length}</span></h2>
+                <h2 className='reviews__title'>Reviews &middot;
+                  <span
+                    className='reviews__amount'
+                  >{reviews.length}
+                  </span>
+                </h2>
                 <ul className='reviews__list'>
                   {reviews.map((review) => (
                     <li key={review.id} className='reviews__item'>
                       <div className='reviews__user user'>
                         <div className='reviews__avatar-wrapper user__avatar-wrapper'>
-                          <img className='reviews__avatar user__avatar' src={review.avatar} width='54' height='54' alt='Reviews avatar' />
+                          <img className='reviews__avatar user__avatar' src={review.avatar} width='54' height='54'
+                            alt='Reviews avatar'
+                          />
                         </div>
                         <span className='reviews__user-name'>
                           {review.user}
@@ -213,7 +226,7 @@
                           {review.text}
                         </p>
                         <time className='reviews__time' dateTime={review.date}>
-                          {new Date(review.date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+                          {new Date(review.date).toLocaleDateString('en-US', {month: 'long', year: 'numeric'})}
                         </time>
                       </div>
                     </li>
@@ -231,7 +244,9 @@
                           id={`${rating}-stars`}
                           type='radio'
                         />
-                        <label htmlFor={`${rating}-stars`} className='reviews__rating-label form__rating-label' title={['perfect', 'good', 'not bad', 'badly', 'terribly'][5 - rating]}>
+                        <label htmlFor={`${rating}-stars`} className='reviews__rating-label form__rating-label'
+                          title={['perfect', 'good', 'not bad', 'badly', 'terribly'][5 - rating]}
+                        >
                           <svg className='form__star-image' width='37' height='33'>
                             <use xlinkHref='#icon-star'></use>
                           </svg>
@@ -248,7 +263,8 @@
                   </textarea>
                   <div className='reviews__button-wrapper'>
                     <p className='reviews__help'>
-                      To submit review please make sure to set <span className='reviews__star'>rating</span> and describe your stay with at least <b className='reviews__text-amount'>50 characters</b>.
+                      To submit review please make sure to set <span className='reviews__star'>rating</span> and
+                      describe your stay with at least <b className='reviews__text-amount'>50 characters</b>.
                     </p>
                     <button className='reviews__submit form__submit button' type='submit' disabled>Submit</button>
                   </div>
@@ -271,7 +287,7 @@
                   )}
                   <div className='near-places__image-wrapper place-card__image-wrapper'>
                     <a href='#'>
-                      <img className='place-card__image' src={offer.image} width='260' height='200' alt='Place image' />
+                      <img className='place-card__image' src={offer.image} width='260' height='200' alt='Place image'/>
                     </a>
                   </div>
                   <div className='place-card__info'>
@@ -280,7 +296,10 @@
                         <b className='place-card__price-value'>&euro;{offer.price}</b>
                         <span className='place-card__price-text'>&#47;&nbsp;night</span>
                       </div>
-                      <button className={`place-card__bookmark-button ${offer.isFavorite ? 'place-card__bookmark-button--active' : ''} button`} type='button'>
+                      <button
+                        className={`place-card__bookmark-button ${offer.isFavorite ? 'place-card__bookmark-button--active' : ''} button`}
+                        type='button'
+                      >
                         <svg className='place-card__bookmark-icon' width='18' height='19'>
                           <use xlinkHref='#icon-bookmark'></use>
                         </svg>
