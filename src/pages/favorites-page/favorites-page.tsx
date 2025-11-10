@@ -1,8 +1,8 @@
 ﻿import { Helmet } from 'react-helmet-async';
 import { Offer } from '../../types/offer';
-import OffersList from '../../components/offers-list/offers-list';
 import {AppRoute} from '../../const';
 import { Link } from 'react-router-dom';
+import OfferList from '../../components/offers-list/offer-list-cities';
 
 type FavoritesPageProps = {
   offers: Offer[];
@@ -68,7 +68,7 @@ function FavoritesPage({offers}: FavoritesPageProps): JSX.Element {
                     </div>
                   </div>
                   <div className="favorites__places">
-                    <OffersList offers={amsterdamOffers} />
+                    <OfferList offers={amsterdamOffers} />
                   </div>
                 </li>
               )}
@@ -83,7 +83,7 @@ function FavoritesPage({offers}: FavoritesPageProps): JSX.Element {
                     </div>
                   </div>
                   <div className="favorites__places">
-                    <OffersList offers={cologneOffers} />
+                    <OfferList offers={cologneOffers} />
                   </div>
                 </li>
               )}
@@ -98,7 +98,7 @@ function FavoritesPage({offers}: FavoritesPageProps): JSX.Element {
                     </div>
                   </div>
                   <div className="favorites__places">
-                    <OffersList offers={parisOffers} />
+                    <OfferList offers={parisOffers} />
                   </div>
                 </li>
               )}
@@ -113,7 +113,7 @@ function FavoritesPage({offers}: FavoritesPageProps): JSX.Element {
                     </div>
                   </div>
                   <div className="favorites__places">
-                    <OffersList offers={brusselsOffers} />
+                    <OfferList offers={brusselsOffers} />
                   </div>
                 </li>
               )}
@@ -128,7 +128,7 @@ function FavoritesPage({offers}: FavoritesPageProps): JSX.Element {
                     </div>
                   </div>
                   <div className="favorites__places">
-                    <OffersList offers={hamburgOffers} />
+                    <OfferList offers={hamburgOffers} />
                   </div>
                 </li>
               )}
@@ -143,7 +143,7 @@ function FavoritesPage({offers}: FavoritesPageProps): JSX.Element {
                     </div>
                   </div>
                   <div className="favorites__places">
-                    <OffersList offers={dusseldorfOffers} />
+                    <OfferList offers={dusseldorfOffers} />
                   </div>
                 </li>
               )}
