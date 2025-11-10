@@ -1,5 +1,8 @@
-﻿export type Offer = {
+﻿import {Point} from './point.ts';
+
+export type Offer = {
   id: number;
+  points: Point;
   city: 'Amsterdam' | 'Paris' | 'Cologne' | 'Brussels' | 'Hamburg' | 'Dusseldorf';
   imageSrc: string[];
   title: string;

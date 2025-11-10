@@ -1,6 +1,6 @@
 ﻿import { useState } from 'react';
 
-function Form() : JSX.Element {
+function Form(){
   const [stars, setStars] = useState(0);
   const [, setReview] = useState('');
 

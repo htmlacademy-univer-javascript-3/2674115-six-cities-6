@@ -1,6 +1,6 @@
 ﻿import {Offer} from '../types/offer';
 
-export const offers: Offer[] = [
+const offers: Offer[] = [
   {
     id: 1,
     imageSrc: [
@@ -24,6 +24,11 @@ export const offers: Offer[] = [
     },
     isPremium: true,
     isFavorite: false,
+    points: {
+      id: 1,
+      lat: 52.3609553943508,
+      lng: 4.85309666406198
+    }
   },
   {
     id: 2,
@@ -31,7 +36,7 @@ export const offers: Offer[] = [
       'img/room.jpg',
       'img/studio-01.jpg'
     ],
-    city: 'Paris',
+    city: 'Amsterdam',
     title: 'Comfortable room in a quiet neighborhood',
     description: 'Cozy private room in a quiet neighborhood, perfect for short stays and budget travelers.',
     rating: 4.7,
@@ -47,6 +52,11 @@ export const offers: Offer[] = [
     },
     isPremium: true,
     isFavorite: true,
+    points: {
+      id: 2,
+      lat: 52.3909553943508,
+      lng: 4.929309666406198
+    }
   },
   {
     id: 3,
@@ -70,32 +80,14 @@ export const offers: Offer[] = [
     },
     isPremium: false,
     isFavorite: false,
+    points: {
+      id: 3,
+      lat: 52.3909553943508,
+      lng: 4.85309666406198
+    }
   },
   {
     id: 4,
-    imageSrc: [
-      'img/apartment-03.jpg',
-      'img/apartment-01.jpg'
-    ],
-    city: 'Paris',
-    title: 'Luxurious loft with premium finishes',
-    description: 'Luxurious loft with modern design, high ceilings, and premium materials. Ideal for a comfortable stay.',
-    rating: 5.0,
-    type: 'Apartment',
-    bedroomCount: 3,
-    adultsCount: 4,
-    price: 180,
-    benefits: ['Wi-Fi', 'Kitchen', 'Washer', 'Heating', 'Dishwasher'],
-    host: {
-      name: 'Angelina',
-      photo: 'img/avatar-angelina.jpg',
-      isPremium: true
-    },
-    isPremium: true,
-    isFavorite: true,
-  },
-  {
-    id: 5,
     imageSrc: [
       'img/room.jpg',
       'img/apartment-02.jpg'
@@ -116,5 +108,11 @@ export const offers: Offer[] = [
     },
     isPremium: false,
     isFavorite: false,
+    points: {
+      id: 4,
+      lat: 52.3809553943508,
+      lng: 4.939309666406198
+    }
   },
 ];
+export default offers;
