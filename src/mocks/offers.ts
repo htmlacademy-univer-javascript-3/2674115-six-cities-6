@@ -107,7 +107,7 @@ const offers: Offer[] = [
       isPremium: false
     },
     isPremium: false,
-    isFavorite: false,
+    isFavorite: true,
     points: {
       id: 4,
       lat: 52.3809553943508,

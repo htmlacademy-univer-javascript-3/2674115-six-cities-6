@@ -1,10 +1,10 @@
 import {useRef, useEffect} from 'react';
 import {Icon, Marker, layerGroup} from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import useMap from '../hooks/map-hook';
 import {Offer} from '../types/offer';
 import {City} from '../types/city';
 import {URL_MARKER_DEFAULT, URL_MARKER_CURRENT} from '../const';
+import useMap from '../hooks/map-hook.tsx';
 
 
 type MapProps = {
