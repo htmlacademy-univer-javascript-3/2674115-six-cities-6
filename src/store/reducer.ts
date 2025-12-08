@@ -1,8 +1,8 @@
 import {createReducer} from '@reduxjs/toolkit';
 import { DEFAULT_CITY } from '../const';
-import { offers } from '../mocks/offers';
 import { changeCity, loadOffers, loadReviews } from './action';
 import { reviews } from '../mocks/reviews';
+import offers from '../mocks/offers.ts';
 
 const initialState = {
   city: DEFAULT_CITY,
