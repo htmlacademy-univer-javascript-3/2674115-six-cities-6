@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import {Offer} from '../types/offer';
 import {City} from '../types/city';
 import {URL_MARKER_DEFAULT, URL_MARKER_CURRENT} from '../const';
-import useMap from '../hooks/map-hook.tsx';
+import useMap from '../hooks/map-hook';
 
 
 type MapProps = {
@@ -29,6 +29,12 @@ function Map({city, offers, selectedPoint}: MapProps): JSX.Element {
 
   const mapRef = useRef(null);
   const map = useMap(mapRef, city);
+
+  useEffect(() => {
+    if (map) {
+      map.setView([city.lat, city.lng], city.zoom);
+    }
+  }, [map, city]);
 
   useEffect(() => {
     if (map) {
