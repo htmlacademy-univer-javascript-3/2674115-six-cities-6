@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 
 function Form() {
   const [stars, setStars] = useState(0);

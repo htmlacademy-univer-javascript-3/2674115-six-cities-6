@@ -1,4 +1,4 @@
-﻿import { Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { AppRoute } from '../const';
 import { ReactNode } from 'react';
 

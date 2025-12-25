@@ -1,5 +1,5 @@
+import { Offer } from '../types/offer';
 import OfferList from './offer-list-base';
-import {Offer} from '../../types/offer.ts';
 
 type OfferListNearPlacesProps = {
   offers: Offer[];

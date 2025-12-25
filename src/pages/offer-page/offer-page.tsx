@@ -1,13 +1,14 @@
-﻿import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { AppRoute } from '../../const';
-import {Form, Link, useParams} from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import Form from '../../components/form';
+import ReviewsList from '../../components/reviews-list';
 import { ReviewType } from '../../types/review';
 import Map from '../../components/map';
 import { Offer } from '../../types/offer';
 import { useState } from 'react';
+import OfferListNearPlaces from '../../components/offer-list-near-places';
 import OfferDescription from './offer-description';
-import OfferListNearPlaces from '../../components/offers-list/offer-list-near-places.tsx';
-import ReviewsList from '../../components/rewiew/rewiews-list.tsx';
 
 type OfferPageProps = {
   reviews: ReviewType[];
@@ -29,18 +30,15 @@ function OfferPage({reviews, offers} : OfferPageProps): JSX.Element {
     setSelectedOffer(currentHoveredOffer);
   };
 
-  const city = currentOffer ?
-    {
-      title: currentOffer.city,
-      lat: currentOffer.points.lat,
-      lng: currentOffer.points.lng,
-      zoom: 13
-    } :
-    {
-      title: 'Paris',
-      lat: 48.85661,
-      lng: 2.351499,
-      zoom: 13
+  const city = currentOffer
+    ? currentOffer.city
+    : {
+      name: 'Paris',
+      location: {
+        latitude: 48.85661,
+        longitude: 2.351499,
+        zoom: 13
+      },
     };
 
   if (!currentOffer) {
