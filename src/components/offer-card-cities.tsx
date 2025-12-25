@@ -1,6 +1,6 @@
+import OfferCard from './offer-card-base.tsx';
+import { Offer } from '../types/offer.ts';
 import { MouseEvent } from 'react';
-import OfferCard from '../offer-card.tsx';
-import {Offer} from '../../types/offer.ts';
 
 type OfferCardCitiesProps = {
   offer: Offer;

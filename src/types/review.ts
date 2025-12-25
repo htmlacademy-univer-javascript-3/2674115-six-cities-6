@@ -1,4 +1,4 @@
-﻿export type ReviewType = {
+export type ReviewType = {
   id: number;
   offerId: number;
   author: string;

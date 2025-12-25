@@ -1,4 +1,4 @@
-﻿import { Offer } from '../types/offer';
+import { Offer } from '../types/offer';
 import { Link } from 'react-router-dom';
 import { getOfferRoute } from '../const';
 import { MouseEvent } from 'react';
@@ -10,7 +10,7 @@ type OfferCardProps = {
 };
 
 function OfferCard({ offer, onMouseEnter, className, }: OfferCardProps): JSX.Element {
-  const mainPhoto = offer.imageSrc[0] || '';
+  const mainPhoto = offer.images[0] || '';
   const offerRoute = getOfferRoute(offer.id);
 
   return (
@@ -53,7 +53,7 @@ function OfferCard({ offer, onMouseEnter, className, }: OfferCardProps): JSX.Ele
         <h2 className='place-card__name'>
           <Link to={offerRoute}>{offer.title}</Link>
         </h2>
-        <p className='place-card__type'>{offer.type}</p>
+        <p className='place-card__type'>{offer.housingType}</p>
       </div>
     </article>
   );

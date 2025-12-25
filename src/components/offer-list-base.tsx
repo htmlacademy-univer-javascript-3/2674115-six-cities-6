@@ -1,8 +1,8 @@
+import OfferCard from './offer-card-base';
+import { Offer } from '../types/offer';
 import { MouseEvent } from 'react';
 import OfferCardCities from './offer-card-cities';
 import OfferCardNearPlaces from './offer-card-near-places';
-import {Offer} from '../../types/offer.ts';
-import OfferCard from '../offer-card.tsx';
 
 type OfferListProps = {
   offers: Offer[];

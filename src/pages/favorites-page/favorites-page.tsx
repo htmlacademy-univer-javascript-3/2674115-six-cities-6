@@ -1,8 +1,8 @@
-﻿import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { Offer } from '../../types/offer';
+import OfferList from '../../components/offer-list-cities';
 import {AppRoute} from '../../const';
 import { Link } from 'react-router-dom';
-import OfferList from '../../components/offers-list/offer-list-cities';
 
 type FavoritesPageProps = {
   offers: Offer[];
@@ -10,12 +10,12 @@ type FavoritesPageProps = {
 
 function FavoritesPage({offers}: FavoritesPageProps): JSX.Element {
   const favoriteOffers = offers.filter((offer) => offer.isFavorite);
-  const amsterdamOffers = favoriteOffers.filter((offer) => offer.city === 'Amsterdam');
-  const cologneOffers = favoriteOffers.filter((offer) => offer.city === 'Cologne');
-  const parisOffers = favoriteOffers.filter((offer) => offer.city === 'Paris');
-  const brusselsOffers = favoriteOffers.filter((offer) => offer.city === 'Brussels');
-  const hamburgOffers = favoriteOffers.filter((offer) => offer.city === 'Hamburg');
-  const dusseldorfOffers = favoriteOffers.filter((offer) => offer.city === 'Dusseldorf');
+  const amsterdamOffers = favoriteOffers.filter((offer) => offer.city.name === 'Amsterdam');
+  const cologneOffers = favoriteOffers.filter((offer) => offer.city.name === 'Cologne');
+  const parisOffers = favoriteOffers.filter((offer) => offer.city.name === 'Paris');
+  const brusselsOffers = favoriteOffers.filter((offer) => offer.city.name === 'Brussels');
+  const hamburgOffers = favoriteOffers.filter((offer) => offer.city.name === 'Hamburg');
+  const dusseldorfOffers = favoriteOffers.filter((offer) => offer.city.name === 'Dusseldorf');
 
   const favoriteCount = favoriteOffers.length;
 
