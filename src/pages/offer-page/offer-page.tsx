@@ -1,23 +1,20 @@
 ﻿import { Helmet } from 'react-helmet-async';
 import { AppRoute } from '../../const';
-import { Link, useParams } from 'react-router-dom';
+import {Form, Link, useParams} from 'react-router-dom';
 import { ReviewType } from '../../types/review';
 import Map from '../../components/map';
-import {City} from '../../types/city';
 import { Offer } from '../../types/offer';
 import { useState } from 'react';
 import OfferDescription from './offer-description';
 import OfferListNearPlaces from '../../components/offers-list/offer-list-near-places.tsx';
-import Form from '../../components/comment-form/comment-form.tsx';
 import ReviewsList from '../../components/rewiew/rewiews-list.tsx';
 
 type OfferPageProps = {
   reviews: ReviewType[];
-  city: City;
   offers: Offer[];
 }
 
-function OfferPage({reviews, city, offers} : OfferPageProps): JSX.Element {
+function OfferPage({reviews, offers} : OfferPageProps): JSX.Element {
   const { id } = useParams();
   const offerId = Number(id);
 
@@ -31,6 +28,24 @@ function OfferPage({reviews, city, offers} : OfferPageProps): JSX.Element {
     const currentHoveredOffer = offers.find((offer) => offer.id.toString() === hoveredOfferId);
     setSelectedOffer(currentHoveredOffer);
   };
+
+  const city = currentOffer ?
+    {
+      title: currentOffer.city,
+      lat: currentOffer.points.lat,
+      lng: currentOffer.points.lng,
+      zoom: 13
+    } :
+    {
+      title: 'Paris',
+      lat: 48.85661,
+      lng: 2.351499,
+      zoom: 13
+    };
+
+  if (!currentOffer) {
+    return <div>Offer not found</div>;
+  }
 
   return (
     <div className='page'>
